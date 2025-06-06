@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Dr. Dry</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-form { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(60,60,60,0.07); padding: 2rem; max-width: 500px; margin: 2rem auto; }
+    .contact-form label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+    .contact-form input, .contact-form textarea { width: 100%; padding: 0.7rem; margin-bottom: 1.2rem; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; }
+    .contact-form button { background: #1a237e; color: #fff; border: none; padding: 0.8rem 2rem; border-radius: 30px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background 0.2s; }
+    .contact-form button:hover { background: #3949ab; }
+    .contact-details { text-align: center; margin-top: 2rem; }
+    .contact-details h3 { margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Dr. Dry</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services & Pricing</a></li>
+          <li><a href="franchise.html">Franchise Model</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="container" style="padding: 3rem 0;">
+      <h2>Contact Us</h2>
+      <form class="contact-form" autocomplete="off">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="contact-details">
+        <h3>Business Contact</h3>
+        <p>Email: info@drdry.com</p>
+        <p>Phone: +918850698057</p>
+        <p><a href="https://wa.me/918850698057" class="whatsapp-btn">Chat on WhatsApp</a></p>
+        <p>Address: E2/6:24 , spaggeti complex , sector 15 , Kharghar, Panvel, raigarh (MH) -410210, Maharashtra</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Dr. Dry. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

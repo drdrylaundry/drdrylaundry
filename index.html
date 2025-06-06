@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Dry - Laundry & Dry Cleaning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Dr. Dry</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services & Pricing</a></li>
+          <li><a href="franchise.html">Franchise Model</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="login-btn-group">
+          <button class="cta-btn stylish-btn login-btn" onclick="openLoginModal('customer')">Customer Login</button>
+          <button class="cta-btn stylish-btn login-btn" onclick="openLoginModal('franchiser')">Franchiser Login</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero aesthetic-hero">
+      <div class="hero-content">
+        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png" alt="Dr. Dry Logo" class="hero-logo">
+        <h2>Premium Garment Care with Eco-Conscious Values</h2>
+        <p>Revolutionizing fabric care with German eco-technology that preserves your clothes while protecting the environment.</p>
+        <div class="hero-cta-row">
+          <a href="services.html" class="cta-btn stylish-btn">View Services</a>
+          <div class="cta-btn-group">
+  <button class="cta-btn stylish-btn" onclick="getLocationAndRedirect()">Book a Pickup</button>
+  <a href="https://wa.me/918850698057?text=Hi%20Dr.%20Dry%2C%20I%20want%20to%20book%20a%20pickup" class="cta-btn stylish-btn whatsapp-btn" target="_blank">Chat on WhatsApp</a>
+</div>
+<script>
+function getLocationAndRedirect() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      // In a real app, send location to backend to assign nearest shop
+      alert('Location accessed! We will assign you the nearest shop.');
+      // window.location.href = '/pickup?lat=' + position.coords.latitude + '&lng=' + position.coords.longitude;
+    }, function(error) {
+      alert('Unable to access location. Please allow location access or use WhatsApp chat.');
+    });
+  } else {
+    alert('Geolocation is not supported by this browser.');
+  }
+}
+</script>
+        </div>
+        
+      </div>
+      <div class="hero-bg-shape"></div>
+    </section>
+    <section class="features modern-features">
+      <div class="feature-service">
+        <img src="https://cdn-icons-png.flaticon.com/512/892/892458.png" alt="Clothes" class="feature-icon">
+        <h3>Wash & Fold</h3>
+        <p>Freshly laundered, neatly folded clothes—perfect for your everyday wear.</p>
+      </div>
+      <div class="feature-service">
+        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046875.png" alt="Wash & Iron" class="feature-icon">
+        <h3>Wash & Iron</h3>
+        <p>Get your garments washed and crisply ironed, ready to wear for any occasion.</p>
+      </div>
+      <div class="feature-service">
+        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046867.png" alt="Dry Cleaning" class="feature-icon">
+        <h3>Dry Cleaning</h3>
+        <p>Advanced stain removal and fabric care for delicate and premium clothing.</p>
+      </div>
+      <div class="feature-service">
+        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046872.png" alt="Shoes Cleaning" class="feature-icon">
+        <h3>Shoes Cleaning</h3>
+        <p>Deep cleaning and dry cleaning for all types of shoes, from sports to leather.</p>
+      </div>
+    </section>
+    <section class="features modern-features">
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046868.png" alt="Eco-Friendly" class="feature-icon">
+        <h3>Eco-Friendly</h3>
+        <p>We use biodegradable detergents and sustainable practices.</p>
+      </div>
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/2933/2933825.png" alt="Curtain Cleaning" class="feature-icon">
+        <h3>Curtain Cleaning</h3>
+        <p>Professional cleaning for all types of curtains, ensuring freshness and longevity.</p>
+      </div>
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046869.png" alt="Sofa Cleaning" class="feature-icon">
+        <h3>Sofa Cleaning</h3>
+        <p>Deep cleaning and stain removal for sofas and upholstered furniture.</p>
+      </div>
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/2933/2933826.png" alt="Carpet Cleaning" class="feature-icon">
+        <h3>Carpet Cleaning</h3>
+        <p>Expert carpet cleaning for a spotless and hygienic home environment.</p>
+      </div>
+    </section>
+    <section class="testimonials">
+      <h3>What Our Customers Say</h3>
+      <div class="testimonial-list">
+        <div class="testimonial">
+          <p>“Dr. Dry brought my favorite dress back to life! Fast, friendly, and flawless.”</p>
+          <span>- Priya S.</span>
+        </div>
+        <div class="testimonial">
+          <p>“The best laundry service in town. My shoes and clothes have never looked better.”</p>
+          <span>- Rahul M.</span>
+        </div>
+        <div class="testimonial">
+          <p>“Eco-friendly and super convenient. Highly recommended!”</p>
+          <span>- Sneha T.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Dr. Dry. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Login Modal Placeholder -->
+  <div id="login-modal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h2 id="login-title">Login</h2>
+      <form id="login-form">
+        <input type="email" id="login-email" placeholder="Email" required><br>
+        <input type="password" id="login-password" placeholder="Password" required><br>
+        <button type="submit" class="cta-btn stylish-btn">Login</button>
+        <p style="margin-top:1rem;">Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
+      </form>
+      <form id="signup-form" style="display:none;">
+        <input type="email" id="signup-email" placeholder="Email" required><br>
+        <input type="password" id="signup-password" placeholder="Password" required><br>
+        <button type="submit" class="cta-btn stylish-btn">Sign Up</button>
+        <p style="margin-top:1rem;">Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+      </form>
+    </div>
+  </div>
+  <script>
+    function openLoginModal(type) {
+      document.getElementById('login-modal').style.display = 'block';
+      document.getElementById('login-title').innerText = type === 'customer' ? 'Customer Login' : 'Franchiser Login';
+      showLogin();
+    }
+    function closeLoginModal() {
+      document.getElementById('login-modal').style.display = 'none';
+    }
+    function showSignup() {
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('signup-form').style.display = 'block';
+    }
+    function showLogin() {
+      document.getElementById('login-form').style.display = 'block';
+      document.getElementById('signup-form').style.display = 'none';
+    }
+    window.onclick = function(event) {
+      var modal = document.getElementById('login-modal');
+      if (event.target == modal) {
+        closeLoginModal();
+      }
+    }
+  </script>
+</body>
+</html>
